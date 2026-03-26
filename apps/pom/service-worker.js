@@ -1,6 +1,6 @@
 self.addEventListener("install", e => {
   e.waitUntil(
-    caches.open("liquid-pomo").then(cache => {
+    caches.open("Minux").then(cache => {
       return cache.addAll([
         "./",
         "./index.html",
