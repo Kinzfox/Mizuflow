@@ -1,11 +1,9 @@
 self.addEventListener("install", e => {
   e.waitUntil(
-    caches.open("liquid-pomo").then(cache => {
+    caches.open("Clova").then(cache => {
       return cache.addAll([
         "./",
         "./index.html",
-        "./style.css",
-        "./script.js",
         "./manifest.json"
       ]);
     })
