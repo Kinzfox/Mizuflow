@@ -1,85 +1,112 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, sans-serif;
-}
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, sans-serif;
+    }
 
-body {
-  min-height: 100vh;
-  background:transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
+    body {
+      min-height: 100vh;
+      background: #111;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
 
-.water_wave {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle at top, #3fffdc, #2ab6af);
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  box-shadow: inset 0 0 20px rgba(0,0,0,.8), 0 0 30px rgba(42,182,175,.4);
-  animation: wobble 4s ease-in-out infinite alternate;
-}
+    label {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
 
-.wave {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  left: 50%;
-  border-radius: 40%;
-  background: rgba(255,255,255,0.25);
-  animation: waveMove 6s linear infinite;
-}
+    #waveColor {
+      margin-bottom: 20px;
+      cursor: pointer;
+      width: 60px;
+      height: 30px;
+      border: none;
+      outline: none;
+    }
 
-.wave2 {
-  border-radius: 45%;
-  background: rgba(255,255,255,0.15);
-  animation-duration: 9s;
-  animation-direction: reverse;
-}
+    .water_wave {
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle at top, #3fffdc, #2ab6af);
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 0 20px rgba(0,0,0,.8), 0 0 30px rgba(42,182,175,.4);
+      animation: wobble 4s ease-in-out infinite alternate;
+    }
 
-.time {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: 2.5rem;
-  z-index: 2;
-}
+    .wave {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      left: 50%;
+      border-radius: 40%;
+      background: rgba(255,255,255,0.25);
+      animation: waveMove 6s linear infinite;
+    }
 
-.main-btn {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(6px);
-  color: #3fffdc;
-  cursor: pointer;
-  z-index: 3;
-}
+    .wave2 {
+      border-radius: 45%;
+      background: rgba(255,255,255,0.15);
+      animation-duration: 9s;
+      animation-direction: reverse;
+    }
 
-.bungee-regular {
-  font-family: "Bungee", sans-serif;
-}
+    .time {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      z-index: 2;
+    }
 
-@keyframes wobble {
-  0% { border-radius: 45% 55% 50% 50%; }
-  50% { border-radius: 55% 45% 45% 55%; }
-  100% { border-radius: 50% 50% 55% 45%; }
-}
+    .main-btn {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(6px);
+      color: #3fffdc;
+      cursor: pointer;
+      z-index: 3;
+      font-size: 1.5rem;
+    }
 
-@keyframes waveMove {
-  from { transform: translateX(-50%) rotate(0deg); }
-  to { transform: translateX(-50%) rotate(360deg); }
-}
+    .bungee-regular {
+      font-family: "Bungee", sans-serif;
+    }
+
+    #waveColor{
+        border-radius: 100px;
+        opacity: 0;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+
+    #waveColor:hover{
+        opacity: 1;
+    }
+
+    @keyframes wobble {
+      0% { border-radius: 45% 55% 50% 50%; }
+      50% { border-radius: 55% 45% 45% 55%; }
+      100% { border-radius: 50% 50% 55% 45%; }
+    }
+
+    @keyframes waveMove {
+      from { transform: translateX(-50%) rotate(0deg); }
+      to { transform: translateX(-50%) rotate(360deg); }
+    }
 
 
